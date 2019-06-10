@@ -1,0 +1,126 @@
+.pokemon-detail {
+}
+
+.pokemon-detail__header {
+  display: flex;
+  //border-bottom: 1px solid #dee5e7;
+
+  img {
+    height: 100%;
+  }
+
+  h1 {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin: 0.5rem 0;
+  }
+}
+
+.pokemon-detail__body {
+  margin: 1rem 0;
+}
+
+.pokemon-detail__overview-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  background-color: #fff;
+  border: 1px solid #e4eaec;
+  border-radius: .215rem;
+  justify-content: space-between;
+}
+
+.counter-label {
+  text-align: center;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 0.5rem;
+  font-weight: 300;
+  line-height: 1.571429;
+  color: #76838f;
+  background-color: #fff;
+  margin-bottom: 1rem;
+
+  @media (min-width: 1200px) {
+    font-size: 1rem;
+  }
+}
+
+.counter-number-group {
+  text-align: center;
+  font-weight: 300;
+  margin-top: 10px;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+
+  @media (min-width: 1200px) {
+    font-size: 48px;
+  }
+}
+
+.kt-subheader__title {
+  margin-bottom: 0;
+}
+
+.kt-subheader__main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.subheader span {
+  display: inline-block;
+  background-color: #8f1f24;
+  border-radius: 5px;
+  margin-right: 0.25rem;
+  padding: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  text-transform: capitalize;
+}
+
+
+.pokemon-detail__detail-card {
+  box-shadow: 0px 0px 13px 0px rgba(82, 63, 105, 0.05);
+  background-color: #ffffff;
+  margin: 20px 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  background-color: #fff;
+  border: 1px solid #e4eaec;
+  border-radius: .215rem;
+  padding: 1rem;
+}
+
+.pokemon-detail__detail-card-head {
+  border-bottom: 1px solid #ebedf2;
+
+  h3 {
+    margin: 0.5rem 0;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #464457;
+  }
+}
+
+.pokemon-detail__detail-card-item {
+  color: #6c7293;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-right: 1.25rem;
+  flex-grow: 1;
+  transition: color 0.3s ease;
+  padding: 1rem 0;
+  border-bottom: 1px dashed #ebedf2;
+}
+
+.pokemon-detail__not-found {
+  text-align: center;
+  margin: 2rem;
+  font-size: 2rem;
+}

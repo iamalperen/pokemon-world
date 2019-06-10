@@ -1,0 +1,17 @@
+<div class="pokemon-list" *ngIf="!(isLoading$ | async)">
+  <h1 class="pokemon-list__title" *ngIf="pokemonList$ | async">Pokemon List</h1>
+  <div class="pokemon-list__cards">
+    <a routerLink="/{{pokemon.name}}" class="pokemon-list__card-item"
+       *ngFor="let pokemon of pokemonList$ | async | paginate: { itemsPerPage: ITEMS_PER_PAGE, currentPage: PAGE }">
+      <img src="assets/img/pointer.png"/>
+      <span>{{pokemon.name}}</span>
+    </a>
+  </div>
+  <p *ngIf="pokemonList$ | async">
+    <pagination-controls (pageChange)="PAGE = $event"></pagination-controls>
+  </p>
+</div>
+<div class="pokemon-list" *ngIf="!(isLoading$ | async) && !(pokemonList$ | async) && (isError$ | async)">
+  <h1 class="pokemon-list__title">There is no pokemon :(</h1>
+</div>
+<div *ngIf="isLoading$ | async" class="loading">Loading&#8230;</div>

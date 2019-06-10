@@ -1,0 +1,64 @@
+.login {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.login__heading {
+  font-size: 2rem;
+  color: #67666e;
+  text-align: center;
+}
+
+.login__form {
+  margin: 2rem auto;
+  max-width: 500px;
+}
+
+.login__input {
+  border: none;
+  height: 50px;
+  margin-top: 1.25rem;
+  background-color: rgba(235, 235, 235, 0.60);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  outline: 0;
+}
+
+.login__input.is-invalid {
+  border: 1px solid #dc3545;
+}
+
+.login__form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.login__submit-btn {
+  height: 50px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  box-shadow: 0px 4px 16px 0px rgba(88, 103, 221, 0.15);
+  background-color: #5867dd;
+  border-color: #5867dd;
+  color: #ffffff;
+  font-size: 0.8rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.login__submit-btn:disabled,
+.login__submit-btn[disabled] {
+  background-color: #a7b1ff;
+}
+
+.login__input-invalid-feedback {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: #dc3545;
+}

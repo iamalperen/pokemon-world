@@ -1,0 +1,83 @@
+<div class="pokemon-detail">
+  <div class="pokemon-detail__header" *ngIf="!(isLoading$ | async) && (pokemon$ | async)">
+    <img src="{{(pokemon$ | async)?.sprites.front_default}}"/>
+    <div class="kt-subheader__main">
+      <h1 class="kt-subheader__title">{{(pokemon$ | async)?.name}}</h1>
+      <div class="subheader">
+        <span *ngFor="let type of (pokemon$ | async)?.types">{{type.type.name}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="pokemon-detail__body" *ngIf="!(isLoading$ | async) && (pokemon$ | async)">
+    <div class="pokemon-detail__overview-card">
+      <div class="pokemon-detail__card-box">
+        <div class="counter">
+          <div class="counter-label">Order</div>
+          <div class="counter-number-group text-truncate">
+            <span class="counter-number">{{(pokemon$ | async)?.order}}</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="counter">
+          <div class="counter-label">Weight</div>
+          <div class="counter-number-group text-truncate">
+            <span class="counter-number">{{(pokemon$ | async)?.weight}}</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="counter">
+          <div class="counter-label">Height</div>
+          <div class="counter-number-group text-truncate">
+            <span class="counter-number">{{(pokemon$ | async)?.height}}</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="counter">
+          <div class="counter-label">Base Experience</div>
+          <div class="counter-number-group text-truncate">
+            <span class="counter-number">{{(pokemon$ | async)?.base_experience}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-detail__detail-card">
+      <div class="pokemon-detail__detail-card-head">
+        <h3>Abilities</h3>
+      </div>
+      <div class="pokemon-detail__detail-card-body">
+        <div class="pokemon-detail__detail-card-item" *ngFor="let ability of (pokemon$ | async)?.abilities">
+          {{ability.ability.name}}
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-detail__detail-card">
+      <div class="pokemon-detail__detail-card-head">
+        <h3>Stats</h3>
+      </div>
+      <div class="pokemon-detail__detail-card-body">
+        <div class="pokemon-detail__detail-card-item" *ngFor="let stat of (pokemon$ | async)?.stats">
+          {{stat.stat.name}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pokemon-detail__detail-card" *ngIf="!(isLoading$ | async) && (pokemon$ | async)">
+    <div class="pokemon-detail__detail-card-head">
+      <h3>Moves</h3>
+    </div>
+    <div class="pokemon-detail__detail-card-body">
+      <div class="pokemon-detail__detail-card-item" *ngFor="let move of (pokemon$ | async)?.moves">
+        {{move.move.name}}
+      </div>
+    </div>
+  </div>
+  <div class="pokemon-detail__not-found" *ngIf="!(isLoading$ | async) && !(pokemon$ | async) && (isError$ | async)">
+    Pokemon Not Found :(
+  </div>
+</div>
+<div *ngIf="(isLoading$ | async)" class="loading">Loading&#8230;</div>

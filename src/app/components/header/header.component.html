@@ -1,0 +1,19 @@
+<header class="header">
+  <div class="container">
+    <div class="header__logo">
+      <a routerLink="/" class="header__logo-link" tabindex="1">
+        <img class="header__logo-img" src="assets/img/pokeball.png" alt="Pokemon World"/>
+        <span class="header__logo-txt">Pokemon World</span>
+      </a>
+    </div>
+    <div *ngIf="auth.isAuthenticated()" class="header__user-actions">
+      <div class="header__user-welcome">
+        <div class="header__user-hello">Hi,</div>
+        <div class="header__user-name">{{auth.getUser()?.email}}</div>
+        <a (click)="auth.logout()" class="header__user-logout" title="Logout" tabindex="2">
+          <img class="header__logout-img" src="assets/img/compass.png"/>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
