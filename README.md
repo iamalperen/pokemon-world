@@ -6,9 +6,9 @@ Firebase Authentication
 
 ## Demo
 
-http://alperen.me/demo/pokemon/
+https://iamalperen.github.io/demo/pokemon/
 
-Credentials
+Demo Credentials
 
 - mail: `test@test.com`
 
